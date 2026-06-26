@@ -1,5 +1,8 @@
-function afterDiscount(price, discount = 0) {
-    return price - (discount/100) * price;
+function hargaSetelahDiskon(harga, diskon = 0) {
+    if (harga <= 0) {
+        return 0
+    }
+    return harga - (diskon/100) * harga;
 }
 
 const nasiGoreng = 25000;
@@ -19,6 +22,6 @@ pembayaran = 100000;
 
 console.log("Harga total = Rp.", total);
 console.log("Diskon = Rp. " + discount + "%" );
-console.log("Harga setelah diskon = Rp.", afterDiscount(total,discount));
+console.log("Harga setelah diskon = Rp.", hargaSetelahDiskon(total,discount));
 console.log("Pembayaran = Rp.", pembayaran);
 console.log("Kembalian = Rp.", pembayaran - total);

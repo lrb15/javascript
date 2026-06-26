@@ -23,6 +23,6 @@ pembayaran = 100000;
 
 console.log("Harga total = Rp.", total);
 console.log("Diskon = Rp. " + diskon + "%" );
-console.log("Harga setelah diskon = Rp.", );
+console.log("Harga setelah diskon = Rp.", setelahDiskon);
 console.log("Pembayaran = Rp.", pembayaran);
 console.log("Kembalian = Rp.", pembayaran - total);

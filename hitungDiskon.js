@@ -3,6 +3,15 @@ function hargaSetelahDiskon(harga, diskon = 0) {
     return harga - (diskon/100) * harga;
 }
 
+function hitungKembalian(total, bayar) {
+    let kembalian = bayar  - total;
+    if (kembalian < 0) {
+        return "Kurang Rp." + (total - bayar);
+    }
+    return "Rp. " + kembalian
+}
+
+
 const nasiGoreng = 25000;
 const mieGoreng = 22000;
 const capcay = 32000;
@@ -25,4 +34,4 @@ console.log("Harga total = Rp.", total);
 console.log("Diskon = Rp. " + diskon + "%" );
 console.log("Harga setelah diskon = Rp.", setelahDiskon);
 console.log("Pembayaran = Rp.", pembayaran);
-console.log("Kembalian = Rp.", pembayaran - setelahDiskon);
+console.log("Kembalian =", hitungKembalian(setelahDiskon, pembayaran));
